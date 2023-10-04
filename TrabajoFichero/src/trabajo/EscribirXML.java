@@ -1,4 +1,4 @@
-package dom2;
+package trabajo;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,15 +13,16 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.io.File; 
 
-public class EscribirDOM {
+public class EscribirXML {
     public static void main(String[] args) {
+    	
         try {
-            // Paso 1: Obtén el documento XML existente
+            // Paso 1: ObtÃ©n el documento XML existente
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(new File("nuevo_ejemplo.xml"));
 
-            // Paso 2: Obtén el elemento raíz
+            // Paso 2: ObtÃ©n el elemento raÃ­z
             Element rootElement = doc.getDocumentElement();
 
             // Paso 3: Busca y actualiza los elementos hijos si ya existen
@@ -30,7 +31,7 @@ public class EscribirDOM {
             Node anoNode = rootElement.getElementsByTagName("ano").item(0);
 
             if (tituloNode != null) {
-                tituloNode.setTextContent("Nuevo Título del Libro");
+                tituloNode.setTextContent("Nuevo TÃ­tulo del Libro");
             }
 
             if (autorNode != null) {
