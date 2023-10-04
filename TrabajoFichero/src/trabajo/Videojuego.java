@@ -102,12 +102,6 @@ public void setJugadores(int[] jugadores) {
 
 //enums
 
-enum plataforma{
-
-	PS5, PS4, PS3, PS2, PS1, PC, xbox, xbox360, xboxOne, xboxOneX, Switch, NES, SNES, N64, gameCube, wii, wiiU, megaDrive, saturn, dreamcast;
-
-}
-
 //generos y subgeneros: https://en.wikipedia.org/wiki/List_of_video_game_genres
 
 enum genero{
