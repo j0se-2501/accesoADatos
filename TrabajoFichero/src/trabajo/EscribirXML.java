@@ -47,10 +47,10 @@ public class EscribirXML {
 
             // Paso 3: Busca y actualiza los elementos hijos si ya existen
          // Obtener nodos para los atributos de Videojuego
-            Node tituloNode = rootElement.getElementsByTagName("titulo").item(nodo); //annadir un id a los videojuegos para cambiar
+            Node idNode = rootElement.getElementsByTagName("id").item(nodo); //annadir un id a los videojuegos para cambiar
             																		//el nombre
             
-            if ((tituloNode.toString().equalsIgnoreCase(videojuegoAEscribir.getTitulo()))||(tituloNode==null)) {
+            if ((idNode.toString().equalsIgnoreCase(videojuegoAEscribir.getID()))||(idNode==null)) {
             	
             	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, tituloNode);
             	flag=true;
