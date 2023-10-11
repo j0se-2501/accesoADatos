@@ -20,11 +20,12 @@ import java.io.IOException;
 
 public class EscribirXML {
 	
-	int nodo;
-    boolean flag;
-    String titulo;
+	private static int nodo;
+	private static boolean flag;
+	private static String titulo;
+    private static Node idNode;
 	
-    public void escribirXML(Videojuego videojuegoAEscribir) {
+    public static void escribirXML(Videojuego videojuegoAEscribir) {
     	
         try {
             // Paso 1: Obtén el documento XML existente
@@ -34,12 +35,12 @@ public class EscribirXML {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc;
-    		
     			doc = builder.parse(new File("coleccionvideojuegos.xml"));
     		
 
             // Paso 2: Obtén el elemento raíz
             Element rootElement = doc.getDocumentElement();
+            int cantidadNodes = rootElement.getChildNodes().getLength();
             
             while(!flag) {
             	
@@ -47,10 +48,16 @@ public class EscribirXML {
 
             // Paso 3: Busca y actualiza los elementos hijos si ya existen
          // Obtener nodos para los atributos de Videojuego
-            Node idNode = rootElement.getElementsByTagName("id").item(nodo); //annadir un id a los videojuegos para cambiar
+            idNode = rootElement.getElementsByTagName("id").item(nodo); //annadir un id a los videojuegos para cambiar
             																		//el nombre
+            if ((idNode==null)&&(nodo==cantidadNodes)) {
+            	
+            	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
+            	flag=true;
+            	
+            } else if (idNode==null) break;
             
-            if ((idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID())))||(idNode==null)) {
+            else if ((idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID())))||(nodo==cantidadNodes)) {
             	
             	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
             	flag=true;
@@ -58,6 +65,8 @@ public class EscribirXML {
             }else
             nodo++;
             }
+         
+        	
             
 
         } catch (Exception e) {
@@ -65,7 +74,7 @@ public class EscribirXML {
         }
     }
     
-    public void escribirDatos(Videojuego videojuegoAEscribir,DocumentBuilderFactory factory, DocumentBuilder builder, Document doc, Element rootElement, Node idNode){
+    public static void escribirDatos(Videojuego videojuegoAEscribir,DocumentBuilderFactory factory, DocumentBuilder builder, Document doc, Element rootElement, Node idNode){
     	
     	try {
     	

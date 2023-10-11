@@ -18,6 +18,12 @@ public class PrincipalPrueba {
 		System.out.println(juego1.toString());
 		System.out.println(juego2.toString());
 		System.out.println(juego3.toString());
+		
+		CrearXML.CrearXML();
+		
+		EscribirXML.escribirXML(juego1);
+		EscribirXML.escribirXML(juego2);
+		EscribirXML.escribirXML(juego3);
 
 	}
 
