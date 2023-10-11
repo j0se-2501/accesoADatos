@@ -18,7 +18,7 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.IOException; 
 
-public class EscribirXML {
+public class ActualizarObjetoEnXML {
 	
 	private static int nodo;
 	private static boolean flag;
@@ -50,23 +50,19 @@ public class EscribirXML {
          // Obtener nodos para los atributos de Videojuego
             idNode = rootElement.getElementsByTagName("id").item(nodo); //annadir un id a los videojuegos para cambiar
             																		//el nombre
-            if ((idNode==null)&&(nodo==cantidadNodes)) {
-            	
-            	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
-            	flag=true;
-            	
-            } else if (idNode==null) break;
             
-            else if ((idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID())))||(nodo==cantidadNodes)) {
+            if (idNode!=null) {
+            if (idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID()))) {
             	
             	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
             	flag=true;
             
             }else
             nodo++;
-            }
+            } else 
+            	nodo++;
          
-        	
+            }
             
 
         } catch (Exception e) {
