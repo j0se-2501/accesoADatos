@@ -50,9 +50,9 @@ public class EscribirXML {
             Node idNode = rootElement.getElementsByTagName("id").item(nodo); //annadir un id a los videojuegos para cambiar
             																		//el nombre
             
-            if ((idNode.toString().equalsIgnoreCase(videojuegoAEscribir.getID()))||(idNode==null)) {
+            if ((idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID())))||(idNode==null)) {
             	
-            	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, tituloNode);
+            	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
             	flag=true;
             
             }else
@@ -65,11 +65,11 @@ public class EscribirXML {
         }
     }
     
-    public void escribirDatos(Videojuego videojuegoAEscribir,DocumentBuilderFactory factory, DocumentBuilder builder, Document doc, Element rootElement, Node tituloNode){
+    public void escribirDatos(Videojuego videojuegoAEscribir,DocumentBuilderFactory factory, DocumentBuilder builder, Document doc, Element rootElement, Node idNode){
     	
     	try {
     	
-    	tituloNode = rootElement.getElementsByTagName("titulo").item(nodo);
+    	Node tituloNode = rootElement.getElementsByTagName("titulo").item(nodo);
         Node desarrolladorNode = rootElement.getElementsByTagName("desarrollador").item(nodo);
         Node directorNode = rootElement.getElementsByTagName("director").item(nodo);
         Node productorNode = rootElement.getElementsByTagName("productor").item(nodo);
@@ -87,6 +87,8 @@ public class EscribirXML {
          jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString(videojuegoAEscribir.getJugadores()[i])); //jugadores de cada mes
          
         }
+        
+        idNode.setTextContent(String.valueOf(videojuegoAEscribir.getID()));
         
         tituloNode.setTextContent(videojuegoAEscribir.getTitulo()); //nuevo titulo
         
