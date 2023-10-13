@@ -35,7 +35,7 @@ public class LeerXML {
 
             // Parsear el archivo XML
 
-            Document document = builder.parse("nuevo_ejemplo.xml");
+            Document document = builder.parse("coleccionvideojuegos.xml");
 
 
 
