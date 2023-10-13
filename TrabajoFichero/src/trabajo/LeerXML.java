@@ -2,6 +2,8 @@ package trabajo;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import java.util.ArrayList;
+
 import javax.xml.parsers.DocumentBuilder;
 
 import org.w3c.dom.Document;
@@ -10,17 +12,12 @@ import org.w3c.dom.Element;
 
 import org.w3c.dom.NodeList;
 
-import trabajo.genero;
-
-import trabajo.subgenero;
-
-//import entrega.Videojuego;
-
-
-
 public class LeerXML {
+	
+	static ArrayList<Videojuego> arrayListVideojuegos = new ArrayList<Videojuego>();
+	
 
-    public static void leerXML() {
+    public static ArrayList<Videojuego> leerXML() {
 
         try {
 
@@ -46,7 +43,7 @@ public class LeerXML {
 
             NodeList listaVideojuegos = document.getElementsByTagName("Videojuegos");
 
-            int[] jugadores = new int[12]; //un mes por casilla del array
+            //int[] jugadores = new int[12]; //un mes por casilla del array
 
             // Iterar a través de la lista de libros
 
@@ -62,9 +59,9 @@ public class LeerXML {
 
             	String productor = videojuego.getElementsByTagName("productor").item(0).getTextContent();
 
-            	genero genero = genero.valueOf(videojuego.getElementsByTagName("genero").item(0).getTextContent());
+            	genero generoEnum = genero.valueOf(videojuego.getElementsByTagName("genero").item(0).getTextContent());
 
-            	subgenero subgenero = subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(0).getTextContent());
+            	subgenero subgeneroEnum = subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(0).getTextContent());
 
             	int pegi = Integer.parseInt(videojuego.getElementsByTagName("pegi").item(0).getTextContent());
 
@@ -72,8 +69,30 @@ public class LeerXML {
 
             	String plataforma = videojuego.getElementsByTagName("plataforma").item(0).getTextContent();
 
-            	//jugadores[0] 
+            	//jugadores[0]
+            	
+            	int enero = Integer.parseInt(videojuego.getElementsByTagName("enero").item(0).getTextContent());
+            	// Supongamos que tienes un objeto videojuego de tipo Element.
+            	// Obtén el contenido de cada mes y conviértelo a un valor entero.
+            	int febrero = Integer.parseInt(videojuego.getElementsByTagName("febrero").item(0).getTextContent());
+            	int marzo = Integer.parseInt(videojuego.getElementsByTagName("marzo").item(0).getTextContent());
+            	int abril = Integer.parseInt(videojuego.getElementsByTagName("abril").item(0).getTextContent());
+            	int mayo = Integer.parseInt(videojuego.getElementsByTagName("mayo").item(0).getTextContent());
+            	int junio = Integer.parseInt(videojuego.getElementsByTagName("junio").item(0).getTextContent());
+            	int julio = Integer.parseInt(videojuego.getElementsByTagName("julio").item(0).getTextContent());
+            	int agosto = Integer.parseInt(videojuego.getElementsByTagName("agosto").item(0).getTextContent());
+            	int septiembre = Integer.parseInt(videojuego.getElementsByTagName("septiembre").item(0).getTextContent());
+            	int octubre = Integer.parseInt(videojuego.getElementsByTagName("octubre").item(0).getTextContent());
+            	int noviembre = Integer.parseInt(videojuego.getElementsByTagName("noviembre").item(0).getTextContent());
+            	int diciembre = Integer.parseInt(videojuego.getElementsByTagName("diciembre").item(0).getTextContent());
 
+            	// Ahora tendrás los valores de cada mes como enteros.
+
+            	
+            	Jugadores jugadores = new Jugadores(enero,  febrero,  marzo,  abril,  mayo,  junio,  julio,  agosto,
+			 septiembre,  octubre, noviembre,  diciembre);
+
+            	
 
 
             	System.out.println("Título: " + titulo);
@@ -84,9 +103,9 @@ public class LeerXML {
 
             	System.out.println("Productor: " + productor);
 
-            	System.out.println("Género: " + genero);
+            	System.out.println("Género: " + generoEnum);
 
-            	System.out.println("Subgénero: " + subgenero);
+            	System.out.println("Subgénero: " + subgeneroEnum);
 
             	System.out.println("PEGI: " + pegi);
 
@@ -94,7 +113,7 @@ public class LeerXML {
 
             	System.out.println("Plataforma: " + plataforma);
 
-            	System.out.print("Jugadores: ");
+            	System.out.print("Jugadores: "+jugadores.toString());
 
             	/*for (String jugador : jugador) {
 
@@ -112,15 +131,21 @@ public class LeerXML {
 
             	System.out.println();
 
+            	Videojuego videojuegoObjeto = new Videojuego(titulo, desarrollador, director, productor, generoEnum,
+            			subgeneroEnum, pegi, anno, plataforma, jugadores);
 
-
+            	arrayListVideojuegos.add(videojuegoObjeto);
+            	
             }
 
+            return arrayListVideojuegos;
+            
         } catch (Exception e) {
 
             e.printStackTrace();
 
         }
+		return arrayListVideojuegos;
 
     }
 
