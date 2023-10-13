@@ -51,40 +51,40 @@ public class LeerXML {
 
             	Element videojuego = (Element) listaVideojuegos.item(i);
 
-            	String titulo = videojuego.getElementsByTagName("titulo").item(0).getTextContent();
+            	String titulo = videojuego.getElementsByTagName("titulo").item(i).getTextContent();
 
-            	String desarrollador = videojuego.getElementsByTagName("desarrollador").item(0).getTextContent();
+            	String desarrollador = videojuego.getElementsByTagName("desarrollador").item(i).getTextContent();
 
-            	String director = videojuego.getElementsByTagName("director").item(0).getTextContent();
+            	String director = videojuego.getElementsByTagName("director").item(i).getTextContent();
 
-            	String productor = videojuego.getElementsByTagName("productor").item(0).getTextContent();
+            	String productor = videojuego.getElementsByTagName("productor").item(i).getTextContent();
 
-            	genero generoEnum = genero.valueOf(videojuego.getElementsByTagName("genero").item(0).getTextContent());
+            	genero generoEnum = genero.valueOf(videojuego.getElementsByTagName("genero").item(i).getTextContent());
 
-            	subgenero subgeneroEnum = subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(0).getTextContent());
+            	subgenero subgeneroEnum = subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(i).getTextContent());
 
-            	int pegi = Integer.parseInt(videojuego.getElementsByTagName("pegi").item(0).getTextContent());
+            	int pegi = Integer.parseInt(videojuego.getElementsByTagName("pegi").item(i).getTextContent());
 
-            	int anno = Integer.parseInt(videojuego.getElementsByTagName("anno").item(0).getTextContent());
+            	int anno = Integer.parseInt(videojuego.getElementsByTagName("anno").item(i).getTextContent());
 
-            	String plataforma = videojuego.getElementsByTagName("plataforma").item(0).getTextContent();
+            	String plataforma = videojuego.getElementsByTagName("plataforma").item(i).getTextContent();
 
             	//jugadores[0]
             	
-            	int enero = Integer.parseInt(videojuego.getElementsByTagName("enero").item(0).getTextContent());
+            	int enero = Integer.parseInt(videojuego.getElementsByTagName("enero").item(i).getTextContent());
             	// Supongamos que tienes un objeto videojuego de tipo Element.
             	// Obtén el contenido de cada mes y conviértelo a un valor entero.
-            	int febrero = Integer.parseInt(videojuego.getElementsByTagName("febrero").item(0).getTextContent());
-            	int marzo = Integer.parseInt(videojuego.getElementsByTagName("marzo").item(0).getTextContent());
-            	int abril = Integer.parseInt(videojuego.getElementsByTagName("abril").item(0).getTextContent());
-            	int mayo = Integer.parseInt(videojuego.getElementsByTagName("mayo").item(0).getTextContent());
-            	int junio = Integer.parseInt(videojuego.getElementsByTagName("junio").item(0).getTextContent());
-            	int julio = Integer.parseInt(videojuego.getElementsByTagName("julio").item(0).getTextContent());
-            	int agosto = Integer.parseInt(videojuego.getElementsByTagName("agosto").item(0).getTextContent());
-            	int septiembre = Integer.parseInt(videojuego.getElementsByTagName("septiembre").item(0).getTextContent());
-            	int octubre = Integer.parseInt(videojuego.getElementsByTagName("octubre").item(0).getTextContent());
-            	int noviembre = Integer.parseInt(videojuego.getElementsByTagName("noviembre").item(0).getTextContent());
-            	int diciembre = Integer.parseInt(videojuego.getElementsByTagName("diciembre").item(0).getTextContent());
+            	int febrero = Integer.parseInt(videojuego.getElementsByTagName("febrero").item(i).getTextContent());
+            	int marzo = Integer.parseInt(videojuego.getElementsByTagName("marzo").item(i).getTextContent());
+            	int abril = Integer.parseInt(videojuego.getElementsByTagName("abril").item(i).getTextContent());
+            	int mayo = Integer.parseInt(videojuego.getElementsByTagName("mayo").item(i).getTextContent());
+            	int junio = Integer.parseInt(videojuego.getElementsByTagName("junio").item(i).getTextContent());
+            	int julio = Integer.parseInt(videojuego.getElementsByTagName("julio").item(i).getTextContent());
+            	int agosto = Integer.parseInt(videojuego.getElementsByTagName("agosto").item(i).getTextContent());
+            	int septiembre = Integer.parseInt(videojuego.getElementsByTagName("septiembre").item(i).getTextContent());
+            	int octubre = Integer.parseInt(videojuego.getElementsByTagName("octubre").item(i).getTextContent());
+            	int noviembre = Integer.parseInt(videojuego.getElementsByTagName("noviembre").item(i).getTextContent());
+            	int diciembre = Integer.parseInt(videojuego.getElementsByTagName("diciembre").item(i).getTextContent());
 
             	// Ahora tendrás los valores de cada mes como enteros.
 

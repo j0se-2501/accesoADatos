@@ -1,7 +1,5 @@
 package trabajo;
 
-import java.util.ArrayList;
-
 public class Videojuego {
 
 private final int ID;
