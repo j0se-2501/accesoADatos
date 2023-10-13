@@ -1,10 +1,14 @@
 package trabajo;
 
+import java.util.ArrayList;
+
+import trabajo.Genero;
+
 public class PrincipalPrueba {
 
 	public static void main(String[] args) {
 		
-		Jugadores jugadores = new Jugadores (10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+		/*Jugadores jugadores = new Jugadores (10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
 	
 		Videojuego juego1 = new Videojuego("The Witcher 3: Wild Hunt", "CD Projekt Red", "Konrad Tomaszkiewicz",
                 "Piotr Krzywonosiuk", genero.rol, subgenero.actionRPG, 18, 2015, "PS4", jugadores);
@@ -59,7 +63,13 @@ public class PrincipalPrueba {
 		ActualizarObjetoEnXML.escribirXML(juego7);
 		ActualizarObjetoEnXML.escribirXML(juego8);
 		ActualizarObjetoEnXML.escribirXML(juego9);
-		ActualizarObjetoEnXML.escribirXML(juego10);
+		ActualizarObjetoEnXML.escribirXML(juego10);*/
+		
+		ArrayList<Videojuego> ArrayListVideojuegos = LeerXML.leerXML();
+		
+		for (Videojuego juego : ArrayListVideojuegos) {
+			juego.toString();
+		}
 		
 
 	}

@@ -12,6 +12,10 @@ import org.w3c.dom.Element;
 
 import org.w3c.dom.NodeList;
 
+import trabajo.Genero;
+
+import trabajo.Subgenero;
+
 public class LeerXML {
 	
 	static ArrayList<Videojuego> arrayListVideojuegos = new ArrayList<Videojuego>();
@@ -41,7 +45,7 @@ public class LeerXML {
 
             // Obtener la lista de elementos 'libro'
 
-            NodeList listaVideojuegos = document.getElementsByTagName("Videojuegos");
+            NodeList listaVideojuegos = document.getElementsByTagName("videojuegos");
 
             //int[] jugadores = new int[12]; //un mes por casilla del array
 
@@ -59,9 +63,9 @@ public class LeerXML {
 
             	String productor = videojuego.getElementsByTagName("productor").item(i).getTextContent();
 
-            	genero generoEnum = genero.valueOf(videojuego.getElementsByTagName("genero").item(i).getTextContent());
+            	Genero generoEnum = Genero.valueOf(videojuego.getElementsByTagName("genero").item(i).getTextContent());
 
-            	subgenero subgeneroEnum = subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(i).getTextContent());
+            	Subgenero subgeneroEnum = Subgenero.valueOf(videojuego.getElementsByTagName("subgenero").item(i).getTextContent());
 
             	int pegi = Integer.parseInt(videojuego.getElementsByTagName("pegi").item(i).getTextContent());
 
