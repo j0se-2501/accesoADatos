@@ -1,12 +1,10 @@
 package trabajo;
 
-import trabajo.Videojuego;
-
 public class PrincipalPrueba {
 
 	public static void main(String[] args) {
 		
-		int[] jugadores = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+		Jugadores jugadores = new Jugadores (10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
 	
 		Videojuego juego1 = new Videojuego("The Witcher 3: Wild Hunt", "CD Projekt Red", "Konrad Tomaszkiewicz",
                 "Piotr Krzywonosiuk", genero.rol, subgenero.actionRPG, 18, 2015, "PS4", jugadores);
