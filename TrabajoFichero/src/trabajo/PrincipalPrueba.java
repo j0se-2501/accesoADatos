@@ -71,6 +71,8 @@ public class PrincipalPrueba {
 			juego.toString();
 		}
 		
+		//CrearXML.CrearXML();
+		
 
 	}
 

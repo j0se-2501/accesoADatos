@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><videojuegos><videojuego><titulo/><desarrollador/><director/><productor/><genero><subgenero/></genero><pegi/><anno/><plataforma/><jugadores><enero/><febrero/><marzo/><abril/><mayo/><junio/><julio/><agosto/><septiembre/><octubre/><noviembre/><diciembre/></jugadores></videojuego></videojuegos>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<videojuegos>
+    <videojuego>
+        <titulo>Super Mario Odyssey</titulo>
+        <desarrollador>Nintendo</desarrollador>
+        <director>Kenta Motokura</director>
+        <productor>Yoshiaki Koizumi</productor>
+        <genero>accion</genero>
+        <subgenero>plataformas</subgenero>
+        <pegi>7</pegi>
+        <anno>2017</anno>
+        <plataforma>Nintendo Switch</plataforma>
+        <jugadores>
+            <enero>365</enero>
+            <febrero>742</febrero>
+            <marzo>128</marzo>
+            <abril>504</abril>
+            <mayo>219</mayo>
+            <junio>891</junio>
+            <julio>633</julio>
+            <agosto>416</agosto>
+            <septiembre>55</septiembre>
+            <octubre>978</octubre>
+            <noviembre>302</noviembre>
+            <diciembre>179</diciembre>
+        </jugadores>
+    </videojuego>
+</videojuegos>
