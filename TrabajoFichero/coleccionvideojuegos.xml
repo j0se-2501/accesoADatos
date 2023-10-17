@@ -2,7 +2,7 @@
 
 <videojuegos>
     <videojuego>
-	<id>1</id>
+	<id>0</id>
         <titulo>The Witcher 3: Wild Hunt</titulo>
         <desarrollador>CD Projekt Red</desarrollador>
         <director>Konrad Tomaszkiewicz</director>
@@ -29,7 +29,7 @@
     </videojuego>
     
     <videojuego>
-	<id>2</id>
+	<id>1</id>
         <titulo>Red Dead Redemption 2</titulo>
         <desarrollador>Rockstar Games</desarrollador>
         <director>Rob Nelson</director>
@@ -55,7 +55,7 @@
         </jugadores>
     </videojuego>
     <videojuego>
-	<id>3</id>
+	<id>2</id>
         <titulo>The Legend of Zelda: Breath of the Wild</titulo>
         <desarrollador>Nintendo</desarrollador>
         <director>Hidemaro Fujibayashi</director>
@@ -81,7 +81,7 @@
         </jugadores>
     </videojuego>
     <videojuego>
-	<id>4</id>
+	<id>3</id>
         <titulo>Uncharted 4: A Thief's End</titulo>
         <desarrollador>Naughty Dog</desarrollador>
         <director>Neil Druckmann</director>
@@ -107,7 +107,7 @@
         </jugadores>
     </videojuego>
     <videojuego>
-	<id>5</id>
+	<id>4</id>
         <titulo>Super Mario Odyssey</titulo>
         <desarrollador>Nintendo</desarrollador>
         <director>Kenta Motokura</director>
@@ -130,6 +130,136 @@
             <octubre>978</octubre>
             <noviembre>302</noviembre>
             <diciembre>179</diciembre>
+        </jugadores>
+    </videojuego>
+    <videojuego>
+        <id>5</id>
+        <titulo>Overwatch</titulo>
+        <desarrollador>Blizzard Entertainment</desarrollador>
+        <director>Jeff Kaplan</director>
+        <productor>Ray Gresko</productor>
+        <genero>accion</genero>
+        <subgenero>shooter</subgenero>
+        <pegi>12</pegi>
+        <anno>2016</anno>
+        <plataforma>PC</plataforma>
+        <jugadores>
+            <enero>837</enero>
+            <febrero>265</febrero>
+            <marzo>419</marzo>
+            <abril>572</abril>
+            <mayo>128</mayo>
+            <junio>934</junio>
+            <julio>356</julio>
+            <agosto>721</agosto>
+            <septiembre>193</septiembre>
+            <octubre>489</octubre>
+            <noviembre>650</noviembre>
+            <diciembre>914</diciembre>
+        </jugadores>
+    </videojuego>
+    <videojuego>
+        <id>6</id>
+        <titulo>Fortnite</titulo>
+        <desarrollador>Epic Games</desarrollador>
+        <director>Darren Sugg</director>
+        <productor>Zak Phelps</productor>
+        <genero>accion</genero>
+        <subgenero>battleRoyale</subgenero>
+        <pegi>12</pegi>
+        <anno>2017</anno>
+        <plataforma>Multiplataforma</plataforma>
+        <jugadores>
+            <enero>721</enero>
+            <febrero>389</febrero>
+            <marzo>517</marzo>
+            <abril>926</abril>
+            <mayo>145</mayo>
+            <junio>638</junio>
+            <julio>274</julio>
+            <agosto>893</agosto>
+            <septiembre>461</septiembre>
+            <octubre>572</octubre>
+            <noviembre>198</noviembre>
+            <diciembre>347</diciembre>
+        </jugadores>
+    </videojuego>
+    <videojuego>
+        <id>7</id>
+        <titulo>FIFA 22</titulo>
+        <desarrollador>EA Sports</desarrollador>
+        <director>Aaron McHardy</director>
+        <productor>David Rutter</productor>
+        <genero>deportes</genero>
+        <subgenero>futbol</subgenero>
+        <pegi>3</pegi>
+        <anno>2021</anno>
+        <plataforma>Multiplataforma</plataforma>
+        <jugadores>
+            <enero>265</enero>
+            <febrero>491</febrero>
+            <marzo>873</marzo>
+            <abril>562</abril>
+            <mayo>147</mayo>
+            <junio>986</junio>
+            <julio>325</julio>
+            <agosto>719</agosto>
+            <septiembre>264</septiembre>
+            <octubre>587</octubre>
+            <noviembre>198</noviembre>
+            <diciembre>452</diciembre>
+        </jugadores>
+    </videojuego>
+    <videojuego>
+        <id>8</id>
+        <titulo>Minecraft</titulo>
+        <desarrollador>Mojang Studios</desarrollador>
+        <director>Markus Persson</director>
+        <productor>Jens Bergensten</productor>
+        <genero>simulacion</genero>
+        <subgenero>construccion</subgenero>
+        <pegi>7</pegi>
+        <anno>2011</anno>
+        <plataforma>Multiplataforma</plataforma>
+        <jugadores>
+            <enero>721</enero>
+            <febrero>398</febrero>
+            <marzo>517</marzo>
+            <abril>142</abril>
+            <mayo>678</mayo>
+            <junio>893</junio>
+            <julio>264</julio>
+            <agosto>935</agosto>
+            <septiembre>487</septiembre>
+            <octubre>572</octubre>
+            <noviembre>198</noviembre>
+            <diciembre>347</diciembre>
+        </jugadores>
+    </videojuego>
+    <videojuego>
+        <id>9</id>
+        <titulo>Among Us</titulo>
+        <desarrollador>InnerSloth</desarrollador>
+        <director>Forest Willard</director>
+        <productor>Amy Liu</productor>
+        <genero>accion</genero>
+        <subgenero>sigilo</subgenero>
+        <pegi>7</pegi>
+        <anno>2018</anno>
+        <plataforma>Multiplataforma</plataforma>
+        <jugadores>
+            <enero>721</enero>
+            <febrero>398</febrero>
+            <marzo>517</marzo>
+            <abril>142</abril>
+            <mayo>678</mayo>
+            <junio>893</junio>
+            <julio>264</julio>
+            <agosto>935</agosto>
+            <septiembre>487</septiembre>
+            <octubre>572</octubre>
+            <noviembre>198</noviembre>
+            <diciembre>347</diciembre>
         </jugadores>
     </videojuego>
 </videojuegos>
