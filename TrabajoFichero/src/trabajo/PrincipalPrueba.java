@@ -68,7 +68,7 @@ public class PrincipalPrueba {
 		ArrayList<Videojuego> ArrayListVideojuegos = LeerXML.leerXML();
 		
 		for (Videojuego juego : ArrayListVideojuegos) {
-			juego.toString();
+			System.out.println(juego.toString());
 		}
 		
 		//CrearXML.CrearXML();
