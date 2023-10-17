@@ -71,6 +71,8 @@ public class PrincipalPrueba {
 			System.out.println(juego.toString());
 		}
 		
+		MetodosJugadores.NumJugadores(ArrayListVideojuegos.get(0));
+		
 		//CrearXML.CrearXML();
 		
 
