@@ -88,43 +88,43 @@ public class ActualizarObjetoEnXML {
         
         
         
-        for (int i = 1; i < 13; i++) {
+        for (int i = 0; i < 12; i++) {
             
         	switch(i) {
-            case 1:
+            case 0:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getEnero())));
                 break;
-            case 2:
+            case 1:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getFebrero())));
                 break;
-            case 3:
+            case 2:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getMarzo())));
                 break;
-            case 4:
+            case 3:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getAbril())));
                 break;
-            case 5:
+            case 4:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getMayo())));
                 break;
-            case 6:
+            case 5:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getJunio())));
                 break;
-            case 7:
+            case 6:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getJulio())));
                 break;
-            case 8:
+            case 7:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getAgosto())));
                 break;
-            case 9:
+            case 8:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getSeptiembre())));
                 break;
-            case 10:
+            case 9:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getOctubre())));
                 break;
-            case 11:
+            case 10:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getNoviembre())));
                 break;
-            case 12:
+            case 11:
             	jugadoresNode.getChildNodes().item(i).setTextContent(Integer.toString((videojuegoAEscribir.getJugadores().getDiciembre())));
                 break;
         	}
