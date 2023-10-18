@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<videojuegos>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><videojuegos>
     <videojuego>
 	<id>0</id>
         <titulo>The Witcher 3: Wild Hunt</titulo>
@@ -184,24 +182,13 @@
             <diciembre>347</diciembre>
         </jugadores>
     </videojuego>
-    <videojuego>
-        <id>7</id>
-        <titulo>FIFA 22</titulo>
-        <desarrollador>EA Sports</desarrollador>
-        <director>Aaron McHardy</director>
-        <productor>David Rutter</productor>
+    <videojuego>7<id>FIFA 23</id>EA Sports<titulo>Aaron McHardy</titulo>David Rutter<desarrollador>deportes</desarrollador>futbol<director>3</director>2021<productor>Multiplataforma</productor>
         <genero>deportes</genero>
         <subgenero>futbol</subgenero>
         <pegi>3</pegi>
         <anno>2021</anno>
         <plataforma>Multiplataforma</plataforma>
-        <jugadores>
-            <enero>265</enero>
-            <febrero>491</febrero>
-            <marzo>873</marzo>
-            <abril>562</abril>
-            <mayo>147</mayo>
-            <junio>986</junio>
+        <jugadores>265<enero>491</enero>873<febrero>562</febrero>147<marzo>986</marzo>325<abril>719</abril>264<mayo>587</mayo>198<junio>452</junio>
             <julio>325</julio>
             <agosto>719</agosto>
             <septiembre>264</septiembre>
