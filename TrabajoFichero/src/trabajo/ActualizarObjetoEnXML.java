@@ -30,8 +30,18 @@ public class ActualizarObjetoEnXML {
             NodeList listaID = doc.getElementsByTagName("id");
             System.out.println("Tamaño de la nodelist de id: "+listaID.getLength());
             
-            Node juegoAEscribirEnXML = listaID.item(videojuegoAEscribir.getID()).getParentNode();
-            escribirDatos(videojuegoAEscribir, factory, builder, doc, juegoAEscribirEnXML);
+            for (int i=0; i<doc.getElementsByTagName("videojuego").getLength(); i++) {
+            
+            if (listaID.item(i).getTextContent().equals(String.valueOf(videojuegoAEscribir.getID()))){
+            	
+            	Node juegoAEscribirEnXML = listaID.item(i).getParentNode();
+                escribirDatos(videojuegoAEscribir, factory, builder, doc, juegoAEscribirEnXML);
+            	
+            }
+            
+            }
+            
+            
             
 
         } catch (Exception e) {

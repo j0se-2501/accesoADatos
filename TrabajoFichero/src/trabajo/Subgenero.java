@@ -8,6 +8,7 @@ enum Subgenero{
 	actionRPG, JRPG, rolOccidental, MMORPG, roguelike, tacticalRPG, dungeonCrawler, //para rol
 	construccion, vida, vehiculos, //para simulacion
 	guerra, MOBA, realTimeStrategy, turnBasedStrategy, //para estrategia
-	carreras, tenis, futbol, baloncesto, golf; //para deportes
-
+	carreras, tenis, futbol, baloncesto, golf, //para deportes
+	sinSubgenero;
+	
 }

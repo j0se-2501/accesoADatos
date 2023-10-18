@@ -158,7 +158,7 @@ public class Metodos {
 		                videojuego.setAnno(nuevoAnno);
 		                break;
 		            case 9:
-		                System.out.println("Introduzca la nueva plataforma:");
+		                System.out.println("Introduzca la nueva plataforma (separadas por comas si son varias):");
 		                sc.nextLine();
 		                String nuevaPlataforma = sc.nextLine();
 		                videojuego.setPlataforma(nuevaPlataforma);
