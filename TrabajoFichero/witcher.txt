@@ -1,0 +1,26 @@
+<videojuego>
+	<id>0</id>
+        <titulo>The Witcher 3: Wild Hunt</titulo>
+        <desarrollador>CD Projekt Red</desarrollador>
+        <director>Konrad Tomaszkiewicz</director>
+        <productor>Piotr Krzywonosiuk</productor>
+        <genero>rol</genero>
+        <subgenero>actionRPG</subgenero>
+        <pegi>18</pegi>
+        <anno>2015</anno>
+        <plataforma>PS4</plataforma>
+        <jugadores>
+            <enero>671</enero>
+            <febrero>128</febrero>
+            <marzo>935</marzo>
+            <abril>402</abril>
+            <mayo>574</mayo>
+            <junio>216</junio>
+            <julio>789</julio>
+            <agosto>343</agosto>
+            <septiembre>502</septiembre>
+            <octubre>897</octubre>
+            <noviembre>165</noviembre>
+            <diciembre>713</diciembre>
+        </jugadores>
+    </videojuego>

@@ -164,11 +164,10 @@ public class Metodos {
 		                videojuego.setPlataforma(nuevaPlataforma);
 		                break;
 		            case 10:
-		                System.out.println("Introduzca el nuevo número de jugadores:");
 		                Jugadores nuevosJugadores = new Jugadores();
 		                int jugadores=0;
 		                for (int i = 0; i < 12; i++) {
-		                    System.out.print("Introduzca la cantidad de jugadores para el mes" + (i + 1) + ": ");
+		                    System.out.print("Introduzca la cantidad de jugadores para el mes " + (i + 1) + ": ");
 		                    jugadores=sc.nextInt();
 		                    switch (i) {
 		                            case 0:
