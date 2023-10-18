@@ -45,16 +45,16 @@ public class ActualizarObjetoEnXML {
     		
     	NodeList hijosVideojuego = juegoAEscribirEnXML.getChildNodes();
     	
-    	Node idNode = hijosVideojuego.item(1);
-    	Node tituloNode = hijosVideojuego.item(2);
-        Node desarrolladorNode = hijosVideojuego.item(3);
-        Node directorNode = hijosVideojuego.item(4);
-        Node productorNode = hijosVideojuego.item(5);
-        Node generoNode = hijosVideojuego.item(6);
-        Node subgeneroNode = hijosVideojuego.item(7);
-        Node pegiNode = hijosVideojuego.item(8);
-        Node annoNode = hijosVideojuego.item(9);
-        Node plataformaNode = hijosVideojuego.item(10);
+    	Node idNode = hijosVideojuego.item(0);
+    	Node tituloNode = hijosVideojuego.item(1);
+        Node desarrolladorNode = hijosVideojuego.item(2);
+        Node directorNode = hijosVideojuego.item(3);
+        Node productorNode = hijosVideojuego.item(4);
+        Node generoNode = hijosVideojuego.item(5);
+        Node subgeneroNode = hijosVideojuego.item(6);
+        Node pegiNode = hijosVideojuego.item(7);
+        Node annoNode = hijosVideojuego.item(8);
+        Node plataformaNode = hijosVideojuego.item(9);
         //Node jugadoresNode = hijosVideojuego.item(10);
         
         
