@@ -33,6 +33,10 @@ public class Jugadores {
 		this.diciembre = diciembre;
 		
 	}
+	
+	public Jugadores() {
+		super();
+	}
 
 	public int getEnero() {
 		return enero;

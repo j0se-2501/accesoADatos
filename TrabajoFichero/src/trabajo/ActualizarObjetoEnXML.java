@@ -47,8 +47,9 @@ public class ActualizarObjetoEnXML {
             
             if (idNode!=null) {
             if (idNode.toString().equals(String.valueOf(videojuegoAEscribir.getID()))) {
-            	
+            	System.out.println("Videojuego encontrado");
             	escribirDatos(videojuegoAEscribir, factory, builder, doc, rootElement, idNode);
+            	
             	flag=true;
             
             }else

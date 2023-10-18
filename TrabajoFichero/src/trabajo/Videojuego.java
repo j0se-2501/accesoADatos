@@ -35,6 +35,11 @@ public Videojuego(String titulo, String desarrollador, String director, String p
 	this.jugadores = jugadores;
 }
 
+public Videojuego() {
+	this.ID = -1;
+	
+}
+
 //getters y setters
 
 public String getTitulo() {

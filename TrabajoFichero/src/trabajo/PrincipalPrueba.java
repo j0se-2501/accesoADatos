@@ -71,7 +71,12 @@ public class PrincipalPrueba {
 			System.out.println(juego.toString());
 		}
 		
-		MetodosJugadores.NumJugadores(ArrayListVideojuegos.get(0));
+		//Metodos.NumJugadores(ArrayListVideojuegos);
+		ActualizarObjetoEnXML.escribirXML(Metodos.editarVideojuego(ArrayListVideojuegos));
+		
+		for (Videojuego juego : ArrayListVideojuegos) {
+			System.out.println(juego.toString());
+		}
 		
 		//CrearXML.CrearXML();
 		
