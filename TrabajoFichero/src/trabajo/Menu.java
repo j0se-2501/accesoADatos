@@ -29,17 +29,17 @@ public class Menu {
                     CrearXML();
                     break;
                 case 2:
-                	Videojuego nuevoVideojuego = crearVideojuego(scanner);
+                	Videojuego nuevoVideojuego = crearVideojuego();
                     videojuegos.add(nuevoVideojuego);
                     System.out.println("Videojuego añadido.");
                 case 3:
                     Metodos.editarVideojuego(videojuegos);
                     break;
                 case 4:
-                    eliminarVideojuego(scanner, videojuegos);
+                    eliminarVideojuego(videojuegos);
                     break;
                 case 5:
-                	LeerXML();
+                	LeerXML.leerXML();
                 case 6:
                     System.out.println("Saliendo del programa.");
                     scanner.close();
@@ -56,7 +56,7 @@ public class Menu {
 		CrearXML.CrearXML();
 	}
 	
-	private static Videojuego crearVideojuego(Scanner scanner) {
+	private static Videojuego crearVideojuego() {
 		System.out.println("Creación de un nuevo Videojuego:");
 
 	    System.out.print("Título: ");
@@ -112,7 +112,7 @@ public class Menu {
     	}
 
 
-    private static void eliminarVideojuego(Scanner scanner, ArrayList<Videojuego> videojuegos) {
+    private static void eliminarVideojuego(ArrayList<Videojuego> videojuegos) {
         
         System.out.print("Elija el id del Videojuego a eliminar: ");
         int index = scanner.nextInt();
@@ -137,8 +137,6 @@ public class Menu {
         }
     }
     
-    private static void LeerXML() {
-    	
-    }
+ 
     
 }
