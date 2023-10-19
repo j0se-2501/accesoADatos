@@ -1,5 +1,6 @@
 package trabajo;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +13,7 @@ public class Metodos {
 		
 				String mes = sc.nextLine().toLowerCase();
 				int totalMes = 0;
+				DecimalFormat df = new DecimalFormat("0.00");
 				
 				switch(mes) {
 				case "1":
@@ -24,7 +26,11 @@ public class Metodos {
 					}
 						for (Videojuego juego : arrayListVideojuego) {
 							
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Enero: "+juego.getJugadores().getEnero()+",Porcentaje en el mes"+(juego.getJugadores().getEnero()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+						double porcentaje = (double) juego.getJugadores().getEnero() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+							
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Enero: "+juego.getJugadores().getEnero()+", Porcentaje en el mes: "+porcentajeFormateado+"%, Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        
 			        break;
@@ -34,7 +40,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getFebrero();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Febrero: "+juego.getJugadores().getFebrero()+",Porcentaje en el mes"+(juego.getJugadores().getFebrero()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getFebrero() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Febrero: "+juego.getJugadores().getFebrero()+", Porcentaje en el mes: "+porcentajeFormateado+"%, Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "3":
@@ -43,7 +52,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getMarzo();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Marzo: "+juego.getJugadores().getMarzo()+",Porcentaje en el mes"+(juego.getJugadores().getMarzo()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getMarzo() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Marzo: "+juego.getJugadores().getMarzo()+", Porcentaje en el mes: "+porcentajeFormateado+"%, Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "4":
@@ -52,7 +64,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getAbril();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Abril: "+juego.getJugadores().getAbril()+",Porcentaje en el mes"+(juego.getJugadores().getAbril()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getAbril() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Abril: "+juego.getJugadores().getAbril()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "5":
@@ -61,7 +76,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getMayo();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Mayo: "+juego.getJugadores().getMayo()+",Porcentaje en el mes"+(juego.getJugadores().getMayo()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getMayo() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Mayo: "+juego.getJugadores().getMayo()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "6":
@@ -70,7 +88,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getJunio();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Junio: "+juego.getJugadores().getJunio()+",Porcentaje en el mes"+(juego.getJugadores().getJunio()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getJunio() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Junio: "+juego.getJugadores().getJunio()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "7":
@@ -79,7 +100,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getJulio();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Julio: "+juego.getJugadores().getJulio()+",Porcentaje en el mes"+(juego.getJugadores().getJulio()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getJulio() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Julio: "+juego.getJugadores().getJulio()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "8":
@@ -88,7 +112,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getAgosto();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Agosto: "+juego.getJugadores().getAgosto()+",Porcentaje en el mes"+(juego.getJugadores().getAgosto()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getAgosto() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Agosto: "+juego.getJugadores().getAgosto()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "9":
@@ -97,7 +124,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getSeptiembre();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Septiembre: "+juego.getJugadores().getSeptiembre()+",Porcentaje en el mes"+(juego.getJugadores().getSeptiembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getSeptiembre() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Septiembre: "+juego.getJugadores().getSeptiembre()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "10":
@@ -106,7 +136,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getOctubre();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Octubre: "+juego.getJugadores().getOctubre()+",Porcentaje en el mes"+(juego.getJugadores().getOctubre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getOctubre() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Octubre: "+juego.getJugadores().getOctubre()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "11":
@@ -115,7 +148,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getNoviembre();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Noviembre: "+juego.getJugadores().getNoviembre()+",Porcentaje en el mes"+(juego.getJugadores().getNoviembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getNoviembre() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Noviembre: "+juego.getJugadores().getNoviembre()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    case "12":
@@ -124,7 +160,10 @@ public class Metodos {
 			    	    totalMes += juego2.getJugadores().getDiciembre();
 			    	}
 			    	for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Diciembre: "+juego.getJugadores().getDiciembre()+",Porcentaje en el mes"+(juego.getJugadores().getDiciembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+			    		double porcentaje = (double) juego.getJugadores().getDiciembre() / totalMes * 100;
+						
+						String porcentajeFormateado = df.format(porcentaje);
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Diciembre: "+juego.getJugadores().getDiciembre()+", Porcentaje en el mes: "+porcentajeFormateado+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        break;
 			    default:
