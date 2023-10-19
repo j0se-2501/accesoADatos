@@ -6,7 +6,7 @@ public class ResetearXML {
 
 
 	
-	public static void ResetearXML(ArrayList<Videojuego> videojuegos) {
+	public static void ResetearXML2(ArrayList<Videojuego> videojuegos) {
 		
 		videojuegos.clear();
 		Videojuego.resetearContador();
