@@ -12,10 +12,6 @@ import org.w3c.dom.Element;
 
 import org.w3c.dom.NodeList;
 
-import trabajo.Genero;
-
-import trabajo.Subgenero;
-
 public class LeerXML {
 	
 	public static ArrayList<Videojuego> leerXML() {
@@ -55,8 +51,6 @@ public class LeerXML {
             for (int i = 0; i < listaVideojuegos.getLength(); i++) {
 
             	Element videojuego = (Element) listaVideojuegos.item(i);
-            	
-            	int id = Integer.parseInt(videojuego.getElementsByTagName("id").item(0).getTextContent());
 
             	String titulo = videojuego.getElementsByTagName("titulo").item(0).getTextContent();
 

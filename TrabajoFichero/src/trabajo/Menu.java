@@ -15,16 +15,16 @@ public class Menu {
         while (true) {
         	
         	
-            System.out.println("Videojuego Menu:");
-            System.out.println("1. Añadir Videojuego");
+            System.out.println("\nVideojuego Menu:");
+            System.out.println("\n1. Añadir Videojuego");
             System.out.println("2. Actualizar Videojuego");
             System.out.println("3. Eliminar Videojuego");
             System.out.println("4. Listar Videojuegos");
             System.out.println("5. Resetear XML por defecto");
             System.out.println("6. Consultar numero de jugadores");
-            System.out.println("8. Salir");
+            System.out.println("\n7. Salir");
             
-            System.out.print("Elija una opción: ");
+            System.out.print("\nElija una opción: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -52,7 +52,7 @@ public class Menu {
                 case 6:
                 	Metodos.NumJugadores(videojuegos);
                 	break;
-                case 8:
+                case 7:
                 	System.out.println("Saliendo del programa.");
                     scanner.close();
                     System.exit(0);

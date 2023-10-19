@@ -41,9 +41,6 @@ public class ActualizarObjetoEnXML {
             
             }
             
-            
-            
-
         } catch (Exception e) {
             e.printStackTrace();
         }
