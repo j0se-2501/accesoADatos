@@ -47,7 +47,7 @@ public class Menu {
                 	for (Videojuego juego : videojuegos) System.out.println(juego.toString());
                     break;
                 case 5:
-                	ResetearXML.ResetearXML(videojuegos);
+                	ResetearXML.ResetearXML2(videojuegos);
                 	break;
                 case 6:
                 	Metodos.NumJugadores(videojuegos);
@@ -82,7 +82,7 @@ public class Menu {
             System.out.println("Pulsa enter para crear un XML con valores por defecto.");
             String enter = scanner.nextLine();
             ArrayList<Videojuego> videojuegos = new ArrayList<Videojuego>();
-            ResetearXML.ResetearXML(videojuegos);
+            ResetearXML.ResetearXML2(videojuegos);
             return videojuegos;
         }
 		
