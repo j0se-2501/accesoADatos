@@ -65,7 +65,7 @@ public class PrincipalPrueba {
 		ActualizarObjetoEnXML.escribirXML(juego9);
 		ActualizarObjetoEnXML.escribirXML(juego10);*/
 		
-		ArrayList<Videojuego> ArrayListVideojuegos = LeerXML.leerXML();
+		/*ArrayList<Videojuego> ArrayListVideojuegos = LeerXML.leerXML();
 		
 		for (Videojuego juego : ArrayListVideojuegos) {
 			System.out.println(juego.toString());
@@ -82,7 +82,9 @@ public class PrincipalPrueba {
 		
 		for (Videojuego juego : ArrayListVideojuegos) {
 			System.out.println(juego.toString());
-		}
+		}*/
+		
+		Menu.MenuVideojuegos();
 		
 		
 		//CrearXML.CrearXML();

@@ -1,24 +1,28 @@
 package trabajo;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-
-	public static ArrayList<Videojuego> videojuegos = new ArrayList<>();
+	
     public static Scanner scanner = new Scanner(System.in);
 	
-	public static void Menu() {
+	public static void MenuVideojuegos() {
+		
+		ArrayList<Videojuego> videojuegos = CompruebaXML();
 		
         while (true) {
+        	
+        	
             System.out.println("Videojuego Menu:");
-            
-            System.out.println("2. Añadir Videojuego");
-            System.out.println("3. Actualizar Videojuego");
-            System.out.println("4. Eliminar Videojuego");
-            System.out.println("5. Leer Videojuegos");
+            System.out.println("1. Añadir Videojuego");
+            System.out.println("2. Actualizar Videojuego");
+            System.out.println("3. Eliminar Videojuego");
+            System.out.println("4. Leer Videojuegos");
+            System.out.println("5. Resetear XML por defecto");
             System.out.println("6. Salir");
-            System.out.println("\n\n\n1. Crear XML (SOLO LA PRIMERA VEZ)");
+            
             System.out.print("Elija una opción: ");
 
             int choice = scanner.nextInt();
@@ -26,25 +30,29 @@ public class Menu {
 
             switch (choice) {
                 case 1:
-                    CrearXML();
-                    break;
-                case 2:
-                	Videojuego nuevoVideojuego = crearVideojuego();
+                	Videojuego nuevoVideojuego = crearVideojuego(scanner);
                     videojuegos.add(nuevoVideojuego);
                     System.out.println("Videojuego añadido.");
+                    CrearXML2.CrearXML2(videojuegos);
+                    break;
+                case 2:
+                	Videojuego videojuegoAEditar = Metodos.editarVideojuego(videojuegos);
+                	ActualizarObjetoEnXML.escribirXML(videojuegoAEditar);;
                 case 3:
-                    Metodos.editarVideojuego(videojuegos);
+                	eliminarVideojuego( videojuegos);
                     break;
                 case 4:
-                    eliminarVideojuego(videojuegos);
+                	LeerXML.leerXML();
                     break;
                 case 5:
-                	LeerXML.leerXML();
+                	
+                	ResetearXML.ResetearXML(videojuegos);
+                	break;
                 case 6:
-                    System.out.println("Saliendo del programa.");
+                	System.out.println("Saliendo del programa.");
                     scanner.close();
                     System.exit(0);
-                    break;
+                	break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
             }
@@ -52,11 +60,31 @@ public class Menu {
 		
 	}
 	
-	private static void CrearXML() {
-		CrearXML.CrearXML();
+	
+	private static ArrayList<Videojuego> CompruebaXML() {
+	
+		String filePath = "coleccionvideojuegos.xml";
+
+        // Crea un objeto File con la ruta especificada
+        File file = new File(filePath);
+
+        // Verifica si el archivo o directorio existe
+        if (file.exists()) {
+            System.out.println("El archivo o directorio existe.");
+            ArrayList<Videojuego> videojuegos = LeerXML.leerXML();
+            return videojuegos;
+        } else {
+            System.out.println("El archivo o directorio no existe.");
+            System.out.println("Pulsa enter para crear");
+            scanner.next();
+            ArrayList<Videojuego> videojuegos = new ArrayList<Videojuego>();
+            ResetearXML.ResetearXML(videojuegos);
+            return videojuegos;
+        }
+		
 	}
 	
-	private static Videojuego crearVideojuego() {
+	private static Videojuego crearVideojuego(Scanner scanner) {
 		System.out.println("Creación de un nuevo Videojuego:");
 
 	    System.out.print("Título: ");
@@ -112,7 +140,7 @@ public class Menu {
     	}
 
 
-    public static void eliminarVideojuego(ArrayList<Videojuego> videojuegos) {
+	public static void eliminarVideojuego(ArrayList<Videojuego> videojuegos) {
         
         System.out.print("Elija el id del Videojuego a eliminar: ");
         int index = scanner.nextInt();
@@ -138,6 +166,5 @@ public class Menu {
         }
     }
     
- 
-    
+       
 }
