@@ -14,6 +14,7 @@ public class Jugadores {
 	private int octubre;
 	private int noviembre;
 	private int diciembre;
+	private int total;
 
 	
 	public Jugadores(int enero, int febrero, int marzo, int abril, int mayo, int junio, int julio, int agosto,
@@ -31,7 +32,7 @@ public class Jugadores {
 		this.octubre = octubre;
 		this.noviembre = noviembre;
 		this.diciembre = diciembre;
-		
+		this.total = enero+febrero+marzo+abril+mayo+junio+julio+agosto+septiembre+octubre+noviembre+diciembre;
 	}
 	
 	public Jugadores() {

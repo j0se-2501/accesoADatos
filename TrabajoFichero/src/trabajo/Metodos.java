@@ -8,51 +8,62 @@ public class Metodos {
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void NumJugadores(ArrayList<Videojuego> arrayListVideojuego) {
-		System.out.println("Introduzca ID del videojuego que quiera consultar los espectadores: ");
-		int id = sc.nextInt();
-		for (Videojuego videojuego : arrayListVideojuego) {
-			if (videojuego.getID()==id) {
+		System.out.println("Introduzca el mes del que quiera saber los jugadores: ");
+		
+				String mes = sc.nextLine().toLowerCase();
 				
-				System.out.println("De que mes desea consultar los espectadores?");
-				String mes = sc.next().toLowerCase();
-				int jugadoresMes=0;
 				
 				try {
 				
 				switch(mes) {
+				case "1":
 				case "enero":
-			        jugadoresMes = videojuego.getJugadores().getEnero();
+					for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+": "+juego.getJugadores().getEnero());
+					}
+			        
 			        break;
+				case "2":
 			    case "febrero":
 			        jugadoresMes = videojuego.getJugadores().getFebrero();
 			        break;
+			    case "3":
 			    case "marzo":
 			        jugadoresMes = videojuego.getJugadores().getMarzo();
 			        break;
+			    case "4":
 			    case "abril":
 			        jugadoresMes = videojuego.getJugadores().getAbril();
 			        break;
+			    case "5":
 			    case "mayo":
 			        jugadoresMes = videojuego.getJugadores().getMayo();
 			        break;
+			    case "6":
 			    case "junio":
 			        jugadoresMes = videojuego.getJugadores().getJunio();
 			        break;
+			    case "7":
 			    case "julio":
 			        jugadoresMes = videojuego.getJugadores().getJulio();
 			        break;
+			    case "8":
 			    case "agosto":
 			        jugadoresMes = videojuego.getJugadores().getAgosto();
 			        break;
+			    case "9":
 			    case "septiembre":
 			        jugadoresMes = videojuego.getJugadores().getSeptiembre();
 			        break;
+			    case "10":
 			    case "octubre":
 			        jugadoresMes = videojuego.getJugadores().getOctubre();
 			        break;
+			    case "11":
 			    case "noviembre":
 			        jugadoresMes = videojuego.getJugadores().getNoviembre();
 			        break;
+			    case "12":
 			    case "diciembre":
 			        jugadoresMes = videojuego.getJugadores().getDiciembre();
 			        break;
@@ -80,11 +91,7 @@ public class Metodos {
 				int media = total/12;
 				
 				System.out.println(videojuego.getTitulo()+": jugadores en " + mes + ": " + jugadoresMes + "; total de jugadores: " + total + "; media anual: " + media + ".");
-				
-			}
-		}
-		
-		
+			
 		
 	}
 	
