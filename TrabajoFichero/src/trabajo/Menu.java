@@ -37,7 +37,8 @@ public class Menu {
                     break;
                 case 2:
                 	Videojuego videojuegoAEditar = Metodos.editarVideojuego(videojuegos);
-                	ActualizarObjetoEnXML.escribirXML(videojuegoAEditar);;
+                	ActualizarObjetoEnXML.escribirXML(videojuegoAEditar);
+                	break;
                 case 3:
                 	eliminarVideojuego( videojuegos);
                     break;
@@ -45,7 +46,6 @@ public class Menu {
                 	LeerXML.leerXML();
                     break;
                 case 5:
-                	
                 	ResetearXML.ResetearXML(videojuegos);
                 	break;
                 case 6:
