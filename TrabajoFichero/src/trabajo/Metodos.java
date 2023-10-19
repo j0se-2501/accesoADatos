@@ -11,88 +11,127 @@ public class Metodos {
 		System.out.println("Introduzca el mes del que quiera saber los jugadores: ");
 		
 				String mes = sc.nextLine().toLowerCase();
-				
-				
-				try {
+				int totalMes = 0;
 				
 				switch(mes) {
 				case "1":
 				case "enero":
-					for (Videojuego juego : arrayListVideojuego) {
-						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+": "+juego.getJugadores().getEnero());
+					
+					for (Videojuego juego2 : arrayListVideojuego) {
+						
+						totalMes += juego2.getJugadores().getEnero();
+						
+					}
+						for (Videojuego juego : arrayListVideojuego) {
+							
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Enero: "+juego.getJugadores().getEnero()+",Porcentaje en el mes"+(juego.getJugadores().getEnero()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
 					}
 			        
 			        break;
 				case "2":
 			    case "febrero":
-			        jugadoresMes = videojuego.getJugadores().getFebrero();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getFebrero();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Febrero: "+juego.getJugadores().getFebrero()+",Porcentaje en el mes"+(juego.getJugadores().getFebrero()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "3":
 			    case "marzo":
-			        jugadoresMes = videojuego.getJugadores().getMarzo();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getMarzo();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Marzo: "+juego.getJugadores().getMarzo()+",Porcentaje en el mes"+(juego.getJugadores().getMarzo()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "4":
 			    case "abril":
-			        jugadoresMes = videojuego.getJugadores().getAbril();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getAbril();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Abril: "+juego.getJugadores().getAbril()+",Porcentaje en el mes"+(juego.getJugadores().getAbril()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "5":
 			    case "mayo":
-			        jugadoresMes = videojuego.getJugadores().getMayo();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getMayo();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Mayo: "+juego.getJugadores().getMayo()+",Porcentaje en el mes"+(juego.getJugadores().getMayo()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "6":
 			    case "junio":
-			        jugadoresMes = videojuego.getJugadores().getJunio();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getJunio();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Junio: "+juego.getJugadores().getJunio()+",Porcentaje en el mes"+(juego.getJugadores().getJunio()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "7":
 			    case "julio":
-			        jugadoresMes = videojuego.getJugadores().getJulio();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getJulio();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Julio: "+juego.getJugadores().getJulio()+",Porcentaje en el mes"+(juego.getJugadores().getJulio()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "8":
 			    case "agosto":
-			        jugadoresMes = videojuego.getJugadores().getAgosto();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getAgosto();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Agosto: "+juego.getJugadores().getAgosto()+",Porcentaje en el mes"+(juego.getJugadores().getAgosto()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "9":
 			    case "septiembre":
-			        jugadoresMes = videojuego.getJugadores().getSeptiembre();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getSeptiembre();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Septiembre: "+juego.getJugadores().getSeptiembre()+",Porcentaje en el mes"+(juego.getJugadores().getSeptiembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "10":
 			    case "octubre":
-			        jugadoresMes = videojuego.getJugadores().getOctubre();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getOctubre();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Octubre: "+juego.getJugadores().getOctubre()+",Porcentaje en el mes"+(juego.getJugadores().getOctubre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "11":
 			    case "noviembre":
-			        jugadoresMes = videojuego.getJugadores().getNoviembre();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getNoviembre();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Noviembre: "+juego.getJugadores().getNoviembre()+",Porcentaje en el mes"+(juego.getJugadores().getNoviembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    case "12":
 			    case "diciembre":
-			        jugadoresMes = videojuego.getJugadores().getDiciembre();
+			    	for (Videojuego juego2 : arrayListVideojuego) {
+			    	    totalMes += juego2.getJugadores().getDiciembre();
+			    	}
+			    	for (Videojuego juego : arrayListVideojuego) {
+						System.out.println("ID: "+juego.getID()+", "+juego.getTitulo()+", Diciembre: "+juego.getJugadores().getDiciembre()+",Porcentaje en el mes"+(juego.getJugadores().getDiciembre()/totalMes)*100+", Total del anno: "+juego.getJugadores().getTotal());
+					}
 			        break;
 			    default:
 			        System.out.println("Mes no valido");
 		    	}
 				
-				}catch(Exception e) {
-					System.out.println("Por favor, introduzca un mes correcto.");
-				}
 				
-				int total = videojuego.getJugadores().getEnero() +
-		                videojuego.getJugadores().getFebrero() +
-		                videojuego.getJugadores().getMarzo() +
-		                videojuego.getJugadores().getAbril() +
-		                videojuego.getJugadores().getMayo() +
-		                videojuego.getJugadores().getJunio() +
-		                videojuego.getJugadores().getJulio() +
-		                videojuego.getJugadores().getAgosto() +
-		                videojuego.getJugadores().getSeptiembre() +
-		                videojuego.getJugadores().getOctubre() +
-		                videojuego.getJugadores().getNoviembre() +
-		                videojuego.getJugadores().getDiciembre();
-				
-				int media = total/12;
-				
-				System.out.println(videojuego.getTitulo()+": jugadores en " + mes + ": " + jugadoresMes + "; total de jugadores: " + total + "; media anual: " + media + ".");
-			
-		
 	}
 	
 	public static Videojuego editarVideojuego(ArrayList<Videojuego> arrayListVideojuego) {

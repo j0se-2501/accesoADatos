@@ -134,6 +134,14 @@ public class Jugadores {
 	public void setDiciembre(int diciembre) {
 		this.diciembre = diciembre;
 	}
+	
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
 
 	@Override
 	public String toString() {
