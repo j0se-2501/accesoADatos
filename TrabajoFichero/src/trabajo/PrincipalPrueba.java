@@ -78,6 +78,13 @@ public class PrincipalPrueba {
 			System.out.println(juego.toString());
 		}
 		
+		Menu.eliminarVideojuego(ArrayListVideojuegos);
+		
+		for (Videojuego juego : ArrayListVideojuegos) {
+			System.out.println(juego.toString());
+		}
+		
+		
 		//CrearXML.CrearXML();
 		
 

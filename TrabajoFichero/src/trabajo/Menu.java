@@ -112,7 +112,7 @@ public class Menu {
     	}
 
 
-    private static void eliminarVideojuego(ArrayList<Videojuego> videojuegos) {
+    public static void eliminarVideojuego(ArrayList<Videojuego> videojuegos) {
         
         System.out.print("Elija el id del Videojuego a eliminar: ");
         int index = scanner.nextInt();
@@ -130,6 +130,7 @@ public class Menu {
             		juego.setPlataforma("---");
             		Jugadores jugadores = new Jugadores(0,0,0,0,0,0,0,0,0,0,0,0);
             		juego.setJugadores(jugadores);
+            		ActualizarObjetoEnXML.escribirXML(juego);
             	}
             }
         } else {
