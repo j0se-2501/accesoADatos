@@ -19,9 +19,10 @@ public class Menu {
             System.out.println("1. Añadir Videojuego");
             System.out.println("2. Actualizar Videojuego");
             System.out.println("3. Eliminar Videojuego");
-            System.out.println("4. Leer Videojuegos");
+            System.out.println("4. Listar Videojuegos");
             System.out.println("5. Resetear XML por defecto");
-            System.out.println("6. Salir");
+            System.out.println("6. Consultar numero de jugadores");
+            System.out.println("8. Salir");
             
             System.out.print("Elija una opción: ");
 
@@ -40,15 +41,18 @@ public class Menu {
                 	ActualizarObjetoEnXML.escribirXML(videojuegoAEditar);
                 	break;
                 case 3:
-                	eliminarVideojuego( videojuegos);
+                	eliminarVideojuego(videojuegos);
                     break;
                 case 4:
-                	LeerXML.leerXML();
+                	for (Videojuego juego : videojuegos) System.out.println(juego.toString());
                     break;
                 case 5:
                 	ResetearXML.ResetearXML(videojuegos);
                 	break;
                 case 6:
+                	Metodos.NumJugadores(videojuegos);
+                	break;
+                case 8:
                 	System.out.println("Saliendo del programa.");
                     scanner.close();
                     System.exit(0);
@@ -75,8 +79,8 @@ public class Menu {
             return videojuegos;
         } else {
             System.out.println("El archivo o directorio no existe.");
-            System.out.println("Pulsa enter para crear");
-            scanner.next();
+            System.out.println("Pulsa enter para crear un XML con valores por defecto.");
+            String enter = scanner.nextLine();
             ArrayList<Videojuego> videojuegos = new ArrayList<Videojuego>();
             ResetearXML.ResetearXML(videojuegos);
             return videojuegos;
