@@ -20,39 +20,22 @@ public class LeerXML {
         	
         	ArrayList<Videojuego> arrayListVideojuegos = new ArrayList<Videojuego>();
 
-            // Crear un objeto DocumentBuilderFactory
-
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-
-
-            // Crear un objeto DocumentBuilder
-
+            //Buscamos el archivo XML
+        	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-
-
-
-            // Parsear el archivo XML
-
             Document document = builder.parse("coleccionvideojuegos.xml");
 
-
-
-            // Obtener la lista de elementos 'libro'
-
+            //Obtenemos todos los nodos "videojuego"
             NodeList listaVideojuegos = document.getElementsByTagName("videojuego");
-
-            //int[] jugadores = new int[12]; //un mes por casilla del array
-
-            // Iterar a través de la lista de libros
             
+            //Comprobamos que la longitud del nodeList de videojuego es correcto
             System.out.println("Longitud de la lista de videojuego: "+listaVideojuegos.getLength());
 
             for (int i = 0; i < listaVideojuegos.getLength(); i++) {
 
-            	Element videojuego = (Element) listaVideojuegos.item(i);
+            	Element videojuego = (Element) listaVideojuegos.item(i); //de cada videojuego, i
 
-            	String titulo = videojuego.getElementsByTagName("titulo").item(0).getTextContent();
+            	String titulo = videojuego.getElementsByTagName("titulo").item(0).getTextContent(); //buscamos la primera y unica iteracion,0, de cada nodo hijo
 
             	String desarrollador = videojuego.getElementsByTagName("desarrollador").item(0).getTextContent();
 
@@ -102,15 +85,15 @@ public class LeerXML {
             	
 
             	Videojuego videojuegoObjeto = new Videojuego(titulo, desarrollador, director, productor, generoEnum,
-            			subgeneroEnum, pegi, anno, plataforma, jugadores);
+            			subgeneroEnum, pegi, anno, plataforma, jugadores); //formamos un objeto videojuego
 
-            	arrayListVideojuegos.add(videojuegoObjeto);
+            	arrayListVideojuegos.add(videojuegoObjeto); //y lo añadimos al arraylist
             	
             }
             
-            for (Videojuego juego : arrayListVideojuegos) System.out.println(juego.toString());
+            for (Videojuego juego : arrayListVideojuegos) System.out.println(juego.toString()); //listamos el arrayList obtenido
 
-            return arrayListVideojuegos;
+            return arrayListVideojuegos; //devolvemos el arrayList para trabajar con el
             
         } catch (Exception e) {
 

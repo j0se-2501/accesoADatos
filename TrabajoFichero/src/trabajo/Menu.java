@@ -69,20 +69,20 @@ public class Menu {
 	
 		String filePath = "coleccionvideojuegos.xml";
 
-        // Crea un objeto File con la ruta especificada
+        //Creamos un objeto File con la ruta especificada
         File file = new File(filePath);
 
-        // Verifica si el archivo o directorio existe
+        //Verificamos si el archivo o directorio existe
         if (file.exists()) {
             System.out.println("El archivo o directorio existe.");
-            ArrayList<Videojuego> videojuegos = LeerXML.leerXML();
+            ArrayList<Videojuego> videojuegos = LeerXML.leerXML(); //si existe, creamos el arrayList a partir del metodo leer
             return videojuegos;
         } else {
             System.out.println("El archivo o directorio no existe.");
             System.out.println("Pulsa enter para crear un XML con valores por defecto.");
             String enter = scanner.nextLine();
             ArrayList<Videojuego> videojuegos = new ArrayList<Videojuego>();
-            ResetearXML.ResetearXML2(videojuegos);
+            ResetearXML.ResetearXML2(videojuegos); //si no existe, creamos un arrayList vacío, le añadimos los valores por defecto, y lo escribimos
             return videojuegos;
         }
 		

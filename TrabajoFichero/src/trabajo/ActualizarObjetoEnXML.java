@@ -18,24 +18,29 @@ public class ActualizarObjetoEnXML {
 	
     public static void escribirXML(Videojuego videojuegoAEscribir) {
     	
+    	//recibe un videojuego cuyos atributos hayan sido editados ya en java para sobreescribirlo en el XML
+    	
         try {
-            // Paso 1: Obtén el documento XML existente
-          
+            
+        	//Obtenemos el documento XML existente
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse("coleccionvideojuegos.xml");
     		
 
-            // Paso 2: Obtén el elemento raíz
+            //Cogemos todos los "id" del xml en una nodeList
             NodeList listaID = doc.getElementsByTagName("id");
+            
+            //Compruebo el tamanno de la nodeList para ver que se han cogido bien los datos
             System.out.println("Tamaño de la nodelist de id: "+listaID.getLength());
             
+            //busco en la nodeList la id que coincida con la del videojuego que entra como argumento
             for (int i=0; i<doc.getElementsByTagName("videojuego").getLength(); i++) {
             
             if (listaID.item(i).getTextContent().equals(String.valueOf(videojuegoAEscribir.getID()))){
             	
-            	Node juegoAEscribirEnXML = listaID.item(i).getParentNode();
-                escribirDatos(videojuegoAEscribir, factory, builder, doc, juegoAEscribirEnXML);
+            	Node juegoAEscribirEnXML = listaID.item(i).getParentNode(); //cogemos el videojuego que corresponde a la ID
+                escribirDatos(videojuegoAEscribir, factory, builder, doc, juegoAEscribirEnXML); //lo paso al metodo que lo escribe en el XML
             	
             }
             
@@ -50,7 +55,7 @@ public class ActualizarObjetoEnXML {
     	
     	try {
     		
-    	NodeList hijosVideojuego = juegoAEscribirEnXML.getChildNodes();
+    	NodeList hijosVideojuego = juegoAEscribirEnXML.getChildNodes(); //cogemos los nodos hijos de videojuego
     	
     	Node idNode = hijosVideojuego.item(0);
     	Node tituloNode = hijosVideojuego.item(1);
@@ -66,34 +71,35 @@ public class ActualizarObjetoEnXML {
         
         
         NodeList mesesEnero = doc.getElementsByTagName("enero");
-        Node jugadoresNode = mesesEnero.item(videojuegoAEscribir.getID()).getParentNode();
+        Node jugadoresNode = mesesEnero.item(videojuegoAEscribir.getID()).getParentNode(); //cojo así los meses
+        																					//porque me daba problema de otra forma
         
         
-        System.out.println("longitud nodo meses: "+jugadoresNode.getChildNodes().getLength());
+        System.out.println("longitud nodo meses: "+jugadoresNode.getChildNodes().getLength()); //compruebo de se han cogido bien
         
-        
+        //se sobreescriben los datos en el XML con el setTextContent
         
         idNode.setTextContent(Integer.toString(videojuegoAEscribir.getID()));
         
-        tituloNode.setTextContent(videojuegoAEscribir.getTitulo()); //nuevo titulo
+        tituloNode.setTextContent(videojuegoAEscribir.getTitulo());
         
-        desarrolladorNode.setTextContent(videojuegoAEscribir.getDesarrollador()); //nuevo desarrollador
+        desarrolladorNode.setTextContent(videojuegoAEscribir.getDesarrollador());
         
-        directorNode.setTextContent(videojuegoAEscribir.getDirector()); //nuevo director
+        directorNode.setTextContent(videojuegoAEscribir.getDirector());
         
-        productorNode.setTextContent(videojuegoAEscribir.getProductor()); //nuevo productor
+        productorNode.setTextContent(videojuegoAEscribir.getProductor());
         
-        generoNode.setTextContent(videojuegoAEscribir.getGenero().toString()); // Nuevo genero
+        generoNode.setTextContent(videojuegoAEscribir.getGenero().toString());
         
-        subgeneroNode.setTextContent(videojuegoAEscribir.getSubgenero().toString()); // Nuevo subgenero
+        subgeneroNode.setTextContent(videojuegoAEscribir.getSubgenero().toString());
         
-        pegiNode.setTextContent(Integer.toString(videojuegoAEscribir.getPegi())); // Nuevo valor del PEGI
+        pegiNode.setTextContent(Integer.toString(videojuegoAEscribir.getPegi()));
         
-        annoNode.setTextContent(Integer.toString(videojuegoAEscribir.getAnno())); // Nuevo año
+        annoNode.setTextContent(Integer.toString(videojuegoAEscribir.getAnno()));
         
-        plataformaNode.setTextContent(videojuegoAEscribir.getPlataforma()); // Nuevas plataformas
+        plataformaNode.setTextContent(videojuegoAEscribir.getPlataforma());
         
-        
+        //lo mismo con los jugadores en cada mes
         
         for (int i = 0; i < 12; i++) {
             
@@ -139,7 +145,7 @@ public class ActualizarObjetoEnXML {
         
 
 
-        // Paso 4: Guarda el documento XML modificado en un archivo
+        //se guarda el documento XML modificado en un archivo
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource source = new DOMSource(doc);

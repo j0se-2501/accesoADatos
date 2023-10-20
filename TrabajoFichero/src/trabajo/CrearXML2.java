@@ -14,26 +14,24 @@ import javax.xml.transform.stream.StreamResult;
 public class CrearXML2 {
     public static void CrearXML2(ArrayList <Videojuego> videojuegosLista) {
         try {
-            // Crear el documento XML
+            // Creamos el documento XML
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.newDocument();
 
-            // Crear el elemento raíz
+            // Creamos el elemento raíz
             Element videojuegos = document.createElement("videojuegos");
             document.appendChild(videojuegos);
 
-            // Agregar videojuegos
+            // Agregamos los videojuegos
             
             for (Videojuego juego : videojuegosLista) {
             	
             	addVideojuego(document, videojuegos, String.valueOf(juego.getID()), juego.getTitulo(), juego.getDesarrollador(), juego.getDirector(), juego.getProductor(), String.valueOf(juego.getGenero()), String.valueOf(juego.getSubgenero()), String.valueOf(juego.getPegi()), String.valueOf(juego.getAnno()), juego.getPlataforma(), String.valueOf(juego.getJugadores().getEnero()), String.valueOf(juego.getJugadores().getFebrero()), String.valueOf(juego.getJugadores().getMarzo()), String.valueOf(juego.getJugadores().getAbril()), String.valueOf(juego.getJugadores().getMayo()), String.valueOf(juego.getJugadores().getJunio()), String.valueOf(juego.getJugadores().getJulio()), String.valueOf(juego.getJugadores().getAgosto()), String.valueOf(juego.getJugadores().getSeptiembre()), String.valueOf(juego.getJugadores().getOctubre()), String.valueOf(juego.getJugadores().getNoviembre()), String.valueOf(juego.getJugadores().getDiciembre()));
             	
-            	
-            }
+             }
             
-            
-            // Crear el transformador y escribir el documento a un archivo XML
+             // Creamos el transformador y escribimos el documento a un archivo XML
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(document);
@@ -46,9 +44,9 @@ public class CrearXML2 {
 
     private static void addVideojuego(Document document, Element parentElement, String id, String titulo, String desarrollador, String director, String productor, String genero, String subgenero, String pegi, String anno, String plataforma, String... jugadores) {
         Element videojuego = document.createElement("videojuego");
-        parentElement.appendChild(videojuego);
+        parentElement.appendChild(videojuego); //al nodo videojuegos (en plural) le vamos metiendo los nodos hijos videojuego
 
-        videojuego.appendChild(createElement(document, "id", id));
+        videojuego.appendChild(createElement(document, "id", id)); //al nodo videojuego le vamos metiendo sus nodos hijos, sus atributos
         videojuego.appendChild(createElement(document, "titulo", titulo));
         videojuego.appendChild(createElement(document, "desarrollador", desarrollador));
         videojuego.appendChild(createElement(document, "director", director));
@@ -59,7 +57,7 @@ public class CrearXML2 {
         videojuego.appendChild(createElement(document, "anno", anno));
         videojuego.appendChild(createElement(document, "plataforma", plataforma));
 
-        Element jugadoresElement = document.createElement("jugadores");
+        Element jugadoresElement = document.createElement("jugadores"); //y lo mismo con jugadores y los jugadores en cada mes
         videojuego.appendChild(jugadoresElement);
 
         String[] meses = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};

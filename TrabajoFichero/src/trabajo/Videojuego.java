@@ -118,7 +118,6 @@ public String toString() {
 
 public static void resetearContador() { 
 	contador=0;
-
 }
 
 }

@@ -6,13 +6,13 @@ public class ResetearXML {
 
 
 	
-	public static void ResetearXML2(ArrayList<Videojuego> videojuegos) {
+	public static void ResetearXML2(ArrayList<Videojuego> videojuegos) { //reseteamos el XML con valores por defecto
 		
-		videojuegos.clear();
-		Videojuego.resetearContador();
+		videojuegos.clear(); //vaciamos el arrayList
+		Videojuego.resetearContador(); //ponemos el contador de IDs a 0 para volver a empezar a asignar ID desde 0
 		
 	
-		Jugadores jugadores1 = new Jugadores(543, 267, 879, 112, 456, 732, 921, 354, 648, 205, 777, 999);
+		Jugadores jugadores1 = new Jugadores(543, 267, 879, 112, 456, 732, 921, 354, 648, 205, 777, 999); //espectadores al azar
 		Jugadores jugadores2 = new Jugadores(315, 698, 182, 503, 869, 124, 356, 789, 961, 237, 444, 712);
 		Jugadores jugadores3 = new Jugadores(932, 167, 594, 378, 741, 256, 803, 149, 672, 418, 555, 889);
 		Jugadores jugadores4 = new Jugadores(401, 823, 174, 569, 938, 267, 614, 952, 135, 780, 326, 699);
@@ -23,7 +23,8 @@ public class ResetearXML {
 		Jugadores jugadores9 = new Jugadores(963, 518, 277, 625, 814, 361, 749, 105, 482, 937, 202, 564);
 		Jugadores jugadores10 = new Jugadores(376, 829, 541, 197, 688, 354, 912, 608, 167, 743, 995, 421);
 
-	
+		//Creamos 10 objetos Videojuego
+		
 		Videojuego juego1 = new Videojuego("The Witcher 3: Wild Hunt", "CD Projekt Red", "Konrad Tomaszkiewicz",
                 "Piotr Krzywonosiuk", Genero.rol, Subgenero.actionRPG, 18, 2015, "PS4", jugadores1);
 
@@ -54,8 +55,7 @@ public class ResetearXML {
         Videojuego juego10 = new Videojuego("Among Us", "InnerSloth", "Forest Willard",
                 "Amy Liu", Genero.accion, Subgenero.sigilo, 7, 2018, "Multiplataforma", jugadores10);
     
-		
-		
+		//los añadimos al ArrayList
       
         videojuegos.add(juego1);
         videojuegos.add(juego2);
@@ -68,17 +68,7 @@ public class ResetearXML {
         videojuegos.add(juego9);
         videojuegos.add(juego10);
 		
-		CrearXML2.CrearXML2(videojuegos);
-		
-		//Metodos.NumJugadores(ArrayListVideojuegos);
-		//ActualizarObjetoEnXML.escribirXML(Metodos.editarVideojuego(ArrayListVideojuegos));
-		
-		//for (Videojuego juego : ArrayListVideojuegos) {
-		//	System.out.println(juego.toString());
-		//}
-		
-		//CrearXML.CrearXML();
-		
+		CrearXML2.CrearXML2(videojuegos); //escribimos el arrayList en el videojuego
 
 	}
 
