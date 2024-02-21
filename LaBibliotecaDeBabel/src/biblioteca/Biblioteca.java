@@ -49,7 +49,7 @@ public class Biblioteca {
                         for (Libro libro : anaquel.getLibros()) {
                             if (libro.getId().equals(id)) {
                                 System.out.println(libro.getId());
-                                System.out.println("\n" + libro.getTexto());
+                                System.out.println("\n" + libro.getTexto()+"\n");
                                 return;
                             }
                         }
@@ -72,7 +72,7 @@ public class Biblioteca {
 	                    for (Libro libro : anaquel.getLibros()) {
 	                        if (libro.getTexto().contains(palabra)) {
 	                            System.out.println(libro.getId()+" contiene: "+palabra);
-	                            System.out.println("\n" + libro.getTexto());
+	                            System.out.println("\n" + libro.getTexto()+"\n");
 	                         }
 	                    }
 	                }

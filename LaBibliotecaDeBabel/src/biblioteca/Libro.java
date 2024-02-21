@@ -48,9 +48,9 @@ public class Libro {
         for (int i = 0; i < longitud; i++) {
             int index = (int) (Math.random() * caracter.length);
             sb.append(caracter[index]);
-            if ((i + 1) % 28 == 0 && i != 0) {
+            /*if ((i + 1) % 28 == 0 && i != 0) {
                 sb.append("\n");
-            }
+            }*/
         }
         return sb.toString();
     }
