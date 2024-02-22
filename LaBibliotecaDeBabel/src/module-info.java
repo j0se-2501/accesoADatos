@@ -7,6 +7,7 @@
 module LaBibliotecaDeBabel {
 	requires java.xml.bind;
 	requires java.xml;
+	requires java.desktop;
 	
-	opens biblioteca to java.xml.bind;
+	opens controlador to java.xml.bind;
 }
